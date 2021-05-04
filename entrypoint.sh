@@ -18,7 +18,7 @@ BRANCH=${LOCAL_BRANCH:-$LOCAL_BRANCH_DEFAULT}
 
 mkdir "$SSH_PATH"
 
-ssh-keyscan -t rsa "$WPENGINE_HOST" >> "$KNOWN_HOSTS_PATH"
+ssh-keyscan -t rsa "testdomain" >> "$KNOWN_HOSTS_PATH"
 
 echo "$WPENGINE_SSH_KEY_PRIVATE" > "$WPENGINE_SSH_KEY_PRIVATE_PATH"
 echo "$WPENGINE_SSH_KEY_PUBLIC" > "$WPENGINE_SSH_KEY_PUBLIC_PATH"
@@ -28,7 +28,7 @@ chmod 644 "$KNOWN_HOSTS_PATH"
 chmod 600 "$WPENGINE_SSH_KEY_PRIVATE_PATH"
 chmod 644 "$WPENGINE_SSH_KEY_PUBLIC_PATH"
 
-git config core.sshCommand "ssh -i TEST -o UserKnownHostsFile=$KNOWN_HOSTS_PATH"
+git config core.sshCommand "ssh -i $WPENGINE_SSH_KEY_PRIVATE_PATH -o UserKnownHostsFile=$KNOWN_HOSTS_PATH"
 
 cd $home
 cd .ssh
