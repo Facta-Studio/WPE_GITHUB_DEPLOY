@@ -34,7 +34,7 @@ cd $home
 ls -a
 cd .ssh
 ls -a
-cd known_hosts
+cd .ssh/known_hosts
 ls -a
 
 
