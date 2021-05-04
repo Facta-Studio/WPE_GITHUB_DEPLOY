@@ -36,5 +36,5 @@ ssh git@git.wpengine.com info
 echo "Target Environment"
 echo git@$WPENGINE_HOST:$WPENGINE_ENV/$WPENGINE_ENVIRONMENT_NAME.git
 
-git remote add $WPENGINE_ENV git@$WPENGINE_HOST:$WPENGINE_ENV/$WPENGINE_ENVIRONMENT_NAME.git
-git push -fu $WPENGINE_ENV $BRANCH:staging
+cd $home/.ssh
+ls -a
