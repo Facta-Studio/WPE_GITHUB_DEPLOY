@@ -30,7 +30,7 @@ chmod 644 "$WPENGINE_SSH_KEY_PUBLIC_PATH"
 
 git config core.sshCommand "ssh -i $WPENGINE_SSH_KEY_PRIVATE_PATH -o UserKnownHostsFile=$KNOWN_HOSTS_PATH"
 
-cd .ssh
+cd $home/.ssh
 ls -a
 cat known_hosts
 
