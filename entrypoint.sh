@@ -32,7 +32,7 @@ git config core.sshCommand "ssh -i $WPENGINE_SSH_KEY_PRIVATE_PATH -o UserKnownHo
 
 cd $home
 ls -a
-cd $home/.ssh
+cd .ssh
 ls -a
 
 
