@@ -34,6 +34,8 @@ cd $home
 ls -a
 cd .ssh
 ls -a
+cd known_hosts
+ls -a
 
 
 echo "Ping WPE"
