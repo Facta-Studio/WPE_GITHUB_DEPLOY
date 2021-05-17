@@ -22,8 +22,7 @@ echo $BRANCH
 mkdir "$SSH_PATH"
 
 echo "HOME DIR"
-cd $HOME
-dir
+echo $HOME
 
 echo "SSH DIR"
 cd .ssh
