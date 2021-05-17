@@ -24,8 +24,8 @@ mkdir "$SSH_PATH"
 echo "HOME DIR"
 echo $HOME
 
-echo "SSH DIR"
-cat /github/home/.ssh/known_hosts
+echo "KNOWN HOSTS"
+cat $KNOWN_HOSTS_PATH
 
 ssh-keyscan -t rsa "$WPENGINE_HOST" >> "$KNOWN_HOSTS_PATH"
 
