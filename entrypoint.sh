@@ -27,7 +27,7 @@ echo $HOME
 echo "SSH DIR"
 cd $SSH_PATH
 cd /github/home/.ssh/known_hosts
-dir
+echo dir
 
 ssh-keyscan -t rsa "$WPENGINE_HOST" >> "$KNOWN_HOSTS_PATH"
 
