@@ -6,8 +6,6 @@ set -e
 : ${WPENGINE_SSH_KEY_PRIVATE?Required secret not set.}
 : ${WPENGINE_SSH_KEY_PUBLIC?Required secret not set.}
 
-dir $HOME
-
 SSH_PATH="$HOME/.ssh"
 WPENGINE_HOST="git.wpengine.com"
 KNOWN_HOSTS_PATH="$SSH_PATH/known_hosts"
@@ -22,6 +20,14 @@ echo "BRANCH"
 echo $BRANCH
 
 mkdir "$SSH_PATH"
+
+echo "HOME DIR"
+cd $HOME
+dir
+
+echo "SSH DIR"
+cd .ssh
+dir
 
 ssh-keyscan -t rsa "$WPENGINE_HOST" >> "$KNOWN_HOSTS_PATH"
 
