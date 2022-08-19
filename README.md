@@ -11,9 +11,9 @@ workflow "Deploy to WP Engine" {
 }
 
 action "Git Push to Production" {
-  uses = "jovrtn/github-action-wpengine-git-deploy@master"
+  uses = "Facta-Studio/WPE_GITHUB_DEPLOY@main"
   env = {
-    WPENGINE_ENVIRONMENT_NAME   = "my-cool-site-production"
+    WPENGINE_ENVIRONMENT_NAME   = "<WPE_ENVIRONMENT_NAME From Git Push page>" <- This should not include the environment prefix (ie. production/facta-studio should be entered as facta-studio)
   }
   secrets = [
     "WPENGINE_SSH_KEY_PRIVATE",
